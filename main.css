@@ -1,0 +1,387 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+#wrap{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+.clear{
+    clear: both;
+}
+.article-heading{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+.article-slo{
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    color: #ccc;
+    margin: 15px 0;
+}
+
+.header{
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    display: flex;
+    justify-content: space-between;
+}
+#nav ul{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+ #nav li{
+    position: relative;
+}
+
+/*#nav i{
+    font-size: 13px;
+    margin-left: 5px;
+    color: white;
+}*/
+#nav > i{
+    padding: 16px 24px;
+    font-weight: bolder;
+    color:white;
+} 
+
+#nav > i:hover{
+    transition: 0.3s ease-in-out;
+    background-color: crimson;
+}
+.ti-close,
+.ti-menu{
+    display: none;
+}
+#nav a{
+    color: rgb(255, 255, 255);
+    padding: 12px 24px;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+}
+#nav a:hover,
+#nav .sub-menu a:hover
+{
+    color: black;
+    transition: 0.3s ease-in-out;
+    background-color: rgb(204, 204, 204) ;
+}
+#nav .sub-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.sub-menu > li{
+    font-size: 15px;  
+}
+#nav .sub-menu a{
+    padding: 8px 16px ;
+    color: black;
+}
+/* #nav .sub-menu a:hover{
+    transition: 0.3s ease-in-out;
+} */
+#nav li:hover .sub-menu{
+    display: block;
+}
+#banner{
+    margin-top: 45.6px;
+    position: relative;
+    padding-top:50% ;
+    background: url(img/ny.jpg) no-repeat top center / contain;
+}
+#banner >.text,
+#banner > .heading{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+#banner >.heading{
+    margin:30px 0;  
+}
+.article{
+    clear: both;
+    max-width: 800px;
+    margin: auto ;
+    padding: 64px 0;
+}
+.article>p{
+    text-align: justify;
+    margin: 15px 0;
+}
+.member-list{
+    padding:32px 0 ;
+}
+.member-list>.mem1{
+    width: 33.333333%;
+    float: left;
+    display: block;
+    text-align: center;
+}
+.mem1>h5{
+    margin: 15px 0;
+    font-weight: 400;
+}
+.mem1>img{
+    width: 154px;
+    border-radius: 4px;
+}
+.toast{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 900px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(126, 126, 126, 0.4);
+    z-index: 9999;
+    display: none;
+}
+.toast__ani{
+    animation: fadeIn .3s ease-in-out;
+
+}
+.toast .close__toast{
+    float: right;
+    padding: 10px 15px;
+    display: block;
+}
+.toast h2{
+    display: block;
+    font-size: xx-large;
+    padding: 5px 15px;
+    font-weight: lighter;
+}
+.toast form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    margin: auto;
+
+}
+
+.toast form .input{
+    width: 100%;
+    margin:15px 0;
+    position: relative;
+}
+.toast form input{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    outline: #ccc;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+.toast form input:not(:placeholder-shown) + label,
+.toast form input:focus + label{
+    top: 0;
+    left: 10px;
+    transition: 0.3s ease-in-out;
+    padding: 0 5px;
+    background-color: white;
+    font-size: small;
+    color: tomato;
+}
+/* .toast form label{
+    flex: 1;
+} */
+.toast label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-50%);
+}
+.toast button{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: tomato;
+    color: white;
+}
+
+.tour-date{
+    clear: both;
+    padding: 64px 0;
+    background-color: black;
+}
+.tour-date > .heading {
+    color: white;
+}
+
+.tour-date>.tour-date-slo{
+    color: #ccc;
+}
+.ticket{
+    border: 1px solid;
+    background-color: white;
+    margin: auto;
+    max-width: 800px;
+}
+.ticket > ul li{
+    list-style: none;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.ticket li>span{
+    background-color: red;
+    padding: 1px 5px;
+    margin-left: 16px;
+    color: white;
+}
+.ticket li .quatity{
+    color: white;
+    background-color: black;
+    display: block;
+    border-radius: 50%;
+    padding: 0 6px;
+    float: right;
+}
+.tour-ticket{
+    max-width: 800px;
+    margin: 32px auto ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+    font-size: 15px;
+}
+.tour-ticket .tour-ticket1 > img{
+    width: 100%;
+}
+.tour-ticket1:hover{
+    mask-image: url(img/newyork.jpg);
+}
+.tour-ticket1 >.info{
+    background-color: #fff;
+    padding: 16px;
+}
+.tour-ticket1 >.info > p , span{
+    padding: 16px 0;
+}
+.tour-ticket1 >.info h2{
+    font-weight: 500;
+}
+.tour-ticket1 >.info > span{
+
+    color: rgba(126, 126, 126, 0.733);
+}
+.tour-ticket1 >.info > button{
+    padding: 8px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact{
+    max-width: 800px;
+    margin: auto;
+    padding: 64px 0;
+}
+.contact .detail-contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0;
+}
+.input1, .input2, .input3 {
+    position: relative;
+    margin: 15px 0;
+}
+.detail-contact .input{
+    width: 100%;
+    height: 2rem;
+    text-indent: 10px;
+}
+.detail-contact .input1, .detail-contact .input2{
+    max-width: 50%;
+    min-width:49%;
+    float: left;
+}
+.detail-contact .input2{
+    margin-left: 8px;
+}
+.detail-contact .input3{
+    clear: both;
+}
+.detail-contact button{
+    float: right;
+    padding: 5px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.detail-contact label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: 0.25s ease-in-out;
+    user-select: none;
+    pointer-events: none;
+}
+.detail-contact .input:not(:placeholder-shown) + label,
+.detail-contact .input:focus + label{
+    top: -5%;
+    left: 5px;
+    transition: 0.25s ease-in-out;
+    padding:0 5px;
+    background-color: white;
+    color: tomato;
+    font-size: smaller;
+}
+.banner img{
+    width: 100%;
+}
+
+.social{
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0 0 0;
+    color: rgb(123, 123, 123);
+}
+.social > i{
+    font-size: larger;
+    padding:20px 10px;
+}
+.social > i:hover{
+    color:tomato;
+}
+
+@keyframes fadeIn {
+    form{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+

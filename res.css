@@ -1,0 +1,109 @@
+@media(max-width: 742px){
+    /* header */
+    .header{
+        overflow: hidden;
+    }
+    .header__ani{
+        animation: open 0.5s ease-in-out;
+    }
+
+    /* nav */
+    #nav ul{
+        flex-direction: column;
+        height: 45.6px;
+    }
+    #nav>li{
+        float: none;
+        display:block;
+    }
+    #nav > li > a{
+        display: block;
+    }
+    #nav > .ti-menu{
+        display: block;
+    }
+    #nav > .ti-search{
+        display: none;
+    } 
+
+    /* banner */
+    #banner >.text, 
+    #banner > .heading {
+        text-align: center;
+    }
+    #banner >.text{
+        font-size: small;
+
+    }
+    #banner > .heading{
+        font-size: large;
+        padding: 10px;
+    }
+
+    /* article */
+    .article{
+        margin: 0 10px;
+        font-size: small;
+    }
+    .member-list>.mem1{
+        float: none;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+    .mem1>img{
+        width: 170px;
+
+    }
+    /* ticket */
+    .ticket{
+        margin:0 10px;
+    }
+    .tour-ticket{
+        grid-template-columns: 1fr;
+    }
+    .tour-ticket1{
+        padding: 20px 10px;
+    }
+
+    /* toast */
+    .toast{
+        height: 300px;
+        width: 400px;
+
+
+    }
+
+    /* contact */
+    .contact .detail-contact{
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+    .detail-contact form{
+        display: flex;
+        flex-direction: column;
+    }
+    .detail-contact .input1,
+    .detail-contact .input2,
+    .detail-contact .input3 {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .detail-contact .input2{
+        margin-left: 0;
+    }
+
+
+    @keyframes open {
+        from{
+            height: 0;
+            opacity: 0;
+        }
+        to{
+            height: 250px;
+            opacity: 1;
+        }
+    }
+
+}
+
