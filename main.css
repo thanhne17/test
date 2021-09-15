@@ -337,6 +337,7 @@ html{
     float: right;
     padding: 5px 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-appearance: none;
 }
 .detail-contact label{
     position: absolute;
