@@ -56,7 +56,7 @@ html{
     color: white;
 }*/
 #nav > i{
-    padding: 16px 24px;
+    padding: 15px 24px;
     font-weight: bolder;
     color:white;
 } 
@@ -159,10 +159,11 @@ html{
     background-color: white;
     box-shadow: 0 0 5px rgba(126, 126, 126, 0.4);
     z-index: 9999;
+    transition: 0.5s ease-in-out;
     display: none;
 }
 .toast__ani{
-    animation: fadeIn .3s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
 
 }
 .toast .close__toast{
@@ -334,10 +335,13 @@ html{
     clear: both;
 }
 .detail-contact button{
-    float: right;
-    padding: 5px 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ccc;
+    outline: #ccc;
     -webkit-appearance: none;
+    float: right;
+    padding: 6px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 .detail-contact label{
     position: absolute;
@@ -378,11 +382,15 @@ html{
 }
 
 @keyframes fadeIn {
-    form{
-        opacity: 0;
-    }
     to{
         opacity: 1;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    from{
+        opacity: 0;
+        width: 20%;
+        height: 20%;
     }
 }
 
