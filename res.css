@@ -6,6 +6,9 @@
     .header__ani{
         animation: open 0.5s ease-in-out;
     }
+    .header--close__ani{
+        animation: close 0.5s ease-in-out;
+    }
 
     /* nav */
     #nav ul{
@@ -25,6 +28,9 @@
     #nav > .ti-search{
         display: none;
     } 
+    #nav .sub-menu{
+        position: initial;
+    }
 
     /* banner */
     #banner >.text, 
@@ -96,14 +102,24 @@
 
     @keyframes open {
         from{
-            height: 0;
-            opacity: 0;
+            height: 46px;
+            /* opacity: 0; */
         }
         to{
-            height: 250px;
+            height: 228px;
             opacity: 1;
         }
     }
 
+}
+@keyframes close {
+    from{
+        height: 228px;
+        opacity: 1;
+    }
+    to{
+        height: 46px;
+        /* opacity: 0; */
+    }
 }
 
